@@ -8,7 +8,5 @@ d3 = differences.filter { |n| n == 3 }.size
 puts '# Day 10 - Part 1:'
 puts d1 * d3
 
-permutations = differences.chunk { |n| n == 1 }.map { |is_one, ary| is_one ? (ary.size * (ary.size - 1)) / 2 + 1 : 1 }
-
 puts '# Day 10 - Part 2:'
-puts permutations.reduce(&:*)
+puts differences.chunk { |n| n == 1 }.map { |is_one, ary| is_one ? (ary.size * (ary.size - 1)) / 2 + 1 : 1 }.reduce(&:*)
