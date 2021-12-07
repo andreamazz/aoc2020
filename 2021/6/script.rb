@@ -1,5 +1,3 @@
-require 'matrix'
-
 input = File.open('data.txt', 'r').map{ |l| l.strip }.first.split(',').map(&:to_i)
 
 counts = [0, 0, 0, 0, 0, 0, 0, 0, 0]
